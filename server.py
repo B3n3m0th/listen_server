@@ -17,7 +17,7 @@ while True:
     received = d[0]
     addr = d[1]
     data_bytes = binascii.hexlify(received)                     #convert UDP packets to HEX
-    data_string = str(data_bytes)                               # Parsing some data from UDP packet
+    data_string = str(data_bytes)                               # convert to String
     module_id = data_string[27]                                 # Parsing some data from UDP packet
     spo2_hex = str(data_string[34]+data_string[35])             # Parsing some data from UDP packet
     pulse_hex = str(data_string[46]+data_string[47])            # Parsing some data from UDP packet
